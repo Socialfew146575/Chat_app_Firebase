@@ -1,13 +1,82 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.formContainer {
+  @apply bg-primary h-[100vh] flex items-center justify-center;
+}
+.formWrapper{
+    @apply bg-white py-[20px] px-[60px] rounded-xl flex flex-col items-center gap-[10px];
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.formWrapper form {
+  @apply flex flex-col gap-[15px];
 }
+
+.formWrapper .logo{
+    @apply text-[#5d5b8d] font-bold text-2xl;
+}
+
+.formWrapper .title{
+
+    @apply text-[#5d5b8d]  text-sm font-semibold;
+
+}
+
+.formWrapper form input{
+
+    @apply p-[8px] text-sm  border-b-[1px]  border-b-[#a7bcff] w-64 outline-none text-[rgb(175,175,175)] focus:text-[#434268];
+
+
+}
+
+.formWrapper form button{
+
+    @apply bg-[#7b96ec] text-white p-[10px] font-bold border-none cursor-pointer rounded-sm;
+
+}
+
+.formWrapper p {
+
+    @apply text-[#5d5b8d] text-xs mt-3
+}
+.formWrapper p .link{
+@apply font-bold text-[#5d5b8d]
+
+}
+.formWrapper form label{
+
+    @apply flex items-center gap-[10px] text-xs text-[#8da4f1] cursor-pointer;
+}
+.formWrapper form label img{
+    @apply w-6;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chatScrollbarArea::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chatScrollbarArea {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.owner{
+
+@apply flex-row-reverse 
+
+}
+
+.owner .message{
+  @apply items-end !important
+}
+
+.owner p{
+  @apply bg-[#8da4f1] text-white ;
+  border-radius:10px 0px 10px 10px !important
+}
+
+
